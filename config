@@ -7,4 +7,6 @@ COMPILER="../IFJ2021/src/compiler"
 # You don't have to change these
 INTERPRETER="./ic21int"
 TEST_DIR="test_cases"
-TMP_DIR="/tmp"
+TMP_DIR="tmp"
+
+

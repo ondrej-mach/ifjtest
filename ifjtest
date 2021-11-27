@@ -167,5 +167,6 @@ function run() {
 [ "$1" ] && [ "$1" = "show" ] && show && exit 0
 [ "$1" ] && [ "$1" = "generate" ] && generate "$2" && exit 0
 
+mkdir -p "$TMP_DIR"
 make -C "$MAKE_DIR"
 run
