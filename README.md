@@ -1,7 +1,9 @@
 # ifjtest
+
 Testing suite for IFJ project, VUT FIT.
 
 ### Installation
+
 - Clone the repository to your linux machine
 - Edit the `config` file to match your project structure
 - Set the `COMPILER` to path to you executable. This is mandatory.
@@ -9,6 +11,7 @@ Testing suite for IFJ project, VUT FIT.
 This is optional, but but convenient. Your project will build automatically before the testing.
 
 ### Running the script
+
 To run the test, just type:
 ```
 ./ifjtest
@@ -39,9 +42,13 @@ To create your own test interactively, run
 ./ifjtest generate "YourName 001"
 ```
 The test will ask you to enter the program to run. Then it will ask for your simple description. After you have entered the description, script will start generating the reference outputs.
+
+Note: If you do this on merlin server, default editor is set to vim. Run `export EDITOR=nano` to set the environment variable.
+
 This command can also be used to generate new reference output.
 
 ### File structure
+
 If you take look into the `test_cases` directory, you can see all the tests. Each has its own directory with these files:
 ```
 description.txt
@@ -60,4 +67,5 @@ All the temporary files and stderr outputs are stored in `./tmp` folder by defau
 
 
 ### Contributing
+
 There are not many test cases yet. If you write some of your own, please make a pull request, so others can try them as well. Please follow the naming scheme. When creating a test case, name it `YOUR_NAME 3_DIGIT_NUMBER` (for example `Ondroid 420`). Keep your descriptions short and simple - one line and ideally under 80 characters.
