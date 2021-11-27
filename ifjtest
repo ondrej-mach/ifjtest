@@ -80,14 +80,14 @@ function run() {
         expectedReturn="$(cat "$test"/return)"
 
         # Run the compiler
-        $COMPILER <"$test"/program.tl >"$TMP_DIR"/out.IFJcode21 2>"$TMP_DIR"/compiler_stderr
+        timeout -k 5s 2s $COMPILER <"$test"/program.tl >"$TMP_DIR"/out.IFJcode21 2>"$TMP_DIR"/compiler_stderr
         compilerReturn=$?
 
         # Did the compiler finish successfully?
         if [ $compilerReturn -eq 0 ]
         then
             # Run the interpreter
-            $INTERPRETER "$TMP_DIR"/out.IFJcode21 <"$test"/input >"$TMP_DIR"/output 2>"$TMP_DIR"/interpreter_stderr
+            timeout -k 5s 2s $INTERPRETER "$TMP_DIR"/out.IFJcode21 <"$test"/input >"$TMP_DIR"/output 2>"$TMP_DIR"/interpreter_stderr
             interpreterReturn=$?
 
             # Did the interpreter finish successfully?
