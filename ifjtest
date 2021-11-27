@@ -136,7 +136,7 @@ function run() {
                             echo "Interpreter exited with error $interpreterReturn:"
                             cat "$TMP_DIR"/interpreter_stderr
                         else
-                            echo "The compiler timed out"
+                            echo "The interpreter timed out"
                         fi
                     else
                         echo Expected output:
