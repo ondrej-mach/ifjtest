@@ -131,7 +131,7 @@ function run() {
                 else
                     if [ $interpreterReturn -ne 0 ]
                     then
-                        if [ "$compilerReturn" -ne 124 ]
+                        if [ "$interpreterReturn" -ne 124 ]
                         then
                             echo "Interpreter exited with error $interpreterReturn:"
                             cat "$TMP_DIR"/interpreter_stderr
@@ -159,7 +159,7 @@ function run() {
                 # Print the intepreter only if the compiler succeeded
                 if [ $compilerReturn -eq 0 ] 
                 then
-                    if [ $compilerReturn -ne 124 ]
+                    if [ $interpreterReturn -ne 124 ]
                     then
                         echo "Interpreter return: $interpreterReturn"
                     else
