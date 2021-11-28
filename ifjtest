@@ -45,7 +45,9 @@ function generate() {
     }
 
     # Create all files
-    touch "$test"/input "$test"/output "$test"/return "$test"/description.txt
+    touch "$test"/input "$test"/return "$test"/description.txt
+    # Delete the output, if there is anything
+    > "$test"/output
 
     # If description file is empty
     [ -s "$test"/description.txt ] || {
