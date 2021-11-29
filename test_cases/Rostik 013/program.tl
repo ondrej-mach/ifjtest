@@ -1,9 +1,11 @@
 require "ifj21"
 
 function bar(a : integer)
+    write(a)
 end
 
 function foo()
+    write ("in foo")
 end
 
 foo()
