@@ -1,1 +1,1 @@
-Iterative implementation of factorial.
+Iterative implementation of factorial. Modified from presentation.

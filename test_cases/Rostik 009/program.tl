@@ -1,4 +1,5 @@
 -- Program 1: Vypocet faktorialu (iterativne)
+
 require "ifj21"
 function main() -- uzivatelska funkce bez parametru
     local a : integer
@@ -14,10 +15,12 @@ function main() -- uzivatelska funkce bez parametru
     else
         vysl = 1
         while a > 0 do
-            vysl = vysl * a a = a - 1 -- dva prikazy
+            vysl = vysl * a
+            a = a - 1 -- dva prikazy
         end
         write("Vysledek je: ", vysl, "\n")
     end
 end
+
 main()
 -- prikaz hlavniho tela programu
