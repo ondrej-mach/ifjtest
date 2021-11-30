@@ -5,7 +5,7 @@ function main()
 	local __ : integer = 7
 	local ___ : integer
 	___ = _ + __
-	write (___)
+	write (___, "\n")
 end
 
 main()
